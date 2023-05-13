@@ -14,7 +14,7 @@ app.use('/api/scategories', scategorieRouter);
 app.use('/api/articles', articleRouter);
 mongoose.set("strictQuery", false); 
 // Connexion à la base données
-mongoose.connect(process.env.DATABASE,{ 
+mongoose.connect(process.env.DATABASECLOUD,{ 
 useNewUrlParser: true, 
 useUnifiedTopology: true
  }) 
@@ -28,4 +28,4 @@ useUnifiedTopology: true
     }); 
     app.listen(process.env.PORT, () => { 
     console.log(`Server is listening on port ${process.env.PORT}`); }); 
-         
+module.exports=app;
